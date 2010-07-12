@@ -1,0 +1,5 @@
+Prerequisistes: 
+	whois must be in Zenoss users $PATH
+		Centos (yum install jwhois)
+		Debian (aptitude install whois)
+
