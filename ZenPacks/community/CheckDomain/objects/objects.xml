@@ -8,9 +8,15 @@ True
 <property visible="True" type="lines" id="zDeviceTemplates" >
 ['check_domain', 'Device']
 </property>
+<property visible="True" type="boolean" id="zPingMonitorIgnore" >
+True
+</property>
 </object>
 <!-- ('', 'zport', 'dmd', 'Devices', 'rrdTemplates', 'check_domain') -->
 <object id='/zport/dmd/Devices/rrdTemplates/check_domain' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
+<property id='zendoc' type='string'>
+Check number of days until domain registration expires. Warn at 30 days, Error at 15 days, critical at 7 days. Check once every 6 hours.
+</property>
 <property type="text" id="description" mode="w" >
 Check number of days until domain registration expires. Warn at 30 days, Error at 15 days, critical at 7 days. Check once every 6 hours.
 </property>
@@ -57,7 +63,7 @@ True
 </tomanycont>
 <tomanycont id='thresholds'>
 <object id='Critical' module='Products.ZenModel.MinMaxThreshold' class='MinMaxThreshold'>
-<property type="boolean" id="enabled" mode="w" >
+<property label="Enabled" type="boolean" id="enabled" mode="w" >
 True
 </property>
 <property type="string" id="minval" mode="w" >
@@ -74,7 +80,7 @@ True
 </property>
 </object>
 <object id='Error' module='Products.ZenModel.MinMaxThreshold' class='MinMaxThreshold'>
-<property type="boolean" id="enabled" mode="w" >
+<property label="Enabled" type="boolean" id="enabled" mode="w" >
 True
 </property>
 <property type="string" id="minval" mode="w" >
@@ -91,7 +97,7 @@ True
 </property>
 </object>
 <object id='Warning' module='Products.ZenModel.MinMaxThreshold' class='MinMaxThreshold'>
-<property type="boolean" id="enabled" mode="w" >
+<property label="Enabled" type="boolean" id="enabled" mode="w" >
 True
 </property>
 <property type="string" id="minval" mode="w" >

@@ -1,3 +1,4 @@
+dist/*
 build/*
 *.pyc
 ZenPacks.community.CheckDomain.egg-info
